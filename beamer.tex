@@ -9,12 +9,42 @@ $endif$
 % ============================ Packages ==================================
 
 
+% =========================== Theme ======================================
+
+\definecolor{Grey}{RGB}{40,40,40}
+\definecolor{Green}{RGB}{141,250,132}
+\definecolor{TGreen}{RGB}{0,210,14}
+
+\setbeamercolor{background canvas}{bg=Grey}
+\setbeamercolor{normal text}{fg=Green}
+\setbeamercolor{title}{fg=TGreen}
+\setbeamercolor{frametitle}{fg=TGreen}
+
+\setbeamercolor{section in toc}{fg=TGreen}
+
+\setbeamercolor{author in head/foot}{fg=Grey, bg=TGreen}
+\setbeamercolor{title in head/foot}{fg=Grey, bg=TGreen}
+
+
+
+\setbeamertemplate{footline}{%
+    \leavevmode%
+    \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{title in head/foot}%
+    \inserttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+	\usebeamerfont{author in head/foot}\insertauthor\hfill\insertpagenumber
+    \end{beamercolorbox}}%
+\vskip0pt%
+}
 
 % ========================== Metadata ====================================
 
 \title{$title$}
 
 \author{$author$}
+
+\institute{$institute$}
 
 \date{$date$}
 
@@ -24,6 +54,10 @@ $endif$
 
 \begin{frame}
     \titlepage
+\end{frame}
+
+\begin{frame}{$title$}
+    \tableofcontents
 \end{frame}
 
 $body$
