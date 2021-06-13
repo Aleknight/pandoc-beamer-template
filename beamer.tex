@@ -8,6 +8,30 @@ $endif$
 
 % ============================ Packages ==================================
 
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+% ============================ Macros ====================================
+
+% argument #1: any options
+\newenvironment{customlegend}[1][]{%
+    \begingroup
+    % inits/clears the lists (which might be populated from previous
+    % axes):
+    \csname pgfplots@init@cleared@structures\endcsname
+    \pgfplotsset{#1}%
+}{%
+    % draws the legend:
+    \csname pgfplots@createlegend\endcsname
+    \endgroup
+}%
+
+% makes \addlegendimage available (typically only available within an
+% axis environment):
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % =========================== Theme ======================================
 
@@ -16,7 +40,7 @@ $endif$
 \definecolor{TGreen}{RGB}{0,210,14}
 
 \setbeamercolor{background canvas}{bg=Grey}
-\setbeamercolor{normal text}{fg=Green}
+\setbeamercolor{normal text}{fg=white}
 \setbeamercolor{title}{fg=TGreen}
 \setbeamercolor{frametitle}{fg=TGreen}
 
