@@ -14,7 +14,8 @@ $endif$
 
 % ============================ Macros ====================================
 
-% argument #1: any options
+% Source: https://tex.stackexchange.com/questions/62262/legend-in-tikzpicture
+%% argument #1: any options
 \newenvironment{customlegend}[1][]{%
     \begingroup
     % inits/clears the lists (which might be populated from previous
@@ -30,6 +31,8 @@ $endif$
 % makes \addlegendimage available (typically only available within an
 % axis environment):
 \def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+
+% Add this for pandoc
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
