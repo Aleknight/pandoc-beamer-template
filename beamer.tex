@@ -10,6 +10,7 @@ $endif$
 
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{caption}
 
 % ============================ Macros ====================================
 
@@ -49,7 +50,9 @@ $endif$
 \setbeamercolor{author in head/foot}{fg=Grey, bg=TGreen}
 \setbeamercolor{title in head/foot}{fg=Grey, bg=TGreen}
 
+\setbeamercolor{itemize item}{fg=Green}
 
+\captionsetup{labelsep=none}
 
 \setbeamertemplate{footline}{%
     \leavevmode%
@@ -61,6 +64,9 @@ $endif$
     \end{beamercolorbox}}%
 \vskip0pt%
 }
+
+\renewcommand{\thefigure}{\textcolor{TGreen}{\bfseries\itshape}}
+\renewcommand{\figurename}{\textcolor{TGreen}{\bfseries\itshape Figure:\space}}
 
 % ========================== Metadata ====================================
 
