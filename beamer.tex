@@ -11,6 +11,7 @@ $endif$
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{caption}
+\usepackage{graphicx}
 
 % ============================ Macros ====================================
 
@@ -80,6 +81,10 @@ $endif$
 \institute{$institute$}
 
 \date{$date$}
+
+$if(logo)$
+\logo{\includegraphics[height=0.5cm]{$logo$}}
+$endif$
 
 % =========================== Core =======================================
 
