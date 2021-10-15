@@ -12,6 +12,7 @@ $endif$
 \usepackage{pgfplots}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{amsthm}
 
 % ============================ Macros ====================================
 
@@ -28,6 +29,12 @@ $endif$
     \csname pgfplots@createlegend\endcsname
     \endgroup
 }%
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
 % makes \addlegendimage available (typically only available within an
 % axis environment):
@@ -48,6 +55,8 @@ $endif$
 \setbeamercolor{normal text}{fg=white}
 \setbeamercolor{title}{fg=TGreen}
 \setbeamercolor{frametitle}{fg=TGreen}
+
+\setbeamercolor{block title}{fg=Green}
 
 \setbeamercolor{section in toc}{fg=TGreen}
 
